@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color : rgb(255, 255, 255);
+    --bg : url(images/Bg1.png);
+}
+
+.light-mode{
+    --primary-color : #1b4063;
+    --bg : url(images/Bg2.png);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.wrapmain {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapper {
+    margin-top: 5%;
+    margin-bottom: 15px;
+    width: 800px;
+    background: transparent;
+    border: 2px solid rgb(1, 195, 142);
+    color: var(--primary-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10 px rgba(41, 182, 243, 0.2);
+    padding: 30px 30px ;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+.wrapper .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-align: center;
+    }
+    .wrapper .form{
+    width: 100%;
+    }
+
+    .wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    }
+
+    .wrapper .form .inputfield label{
+        width: 200px;
+        color: var(--primary-color);
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .wrapper .form .inputfield .input,
+    .wrapper .form .inputfield .textarea{
+        border: 2px solid var(--primary-color);
+        width: 100%;
+        outline: none;
+        font-size: 15px;
+        padding: 8px 10px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .wrapper .form .inputfield .textarea{
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        width: 100%;
+        height: 125px;
+        resize: none;
+    }
+
+    .wrapper .form .inputfield .custom_select{
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .wrapper .form .inputfield .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+    }
+
+    .wrapper .form .inputfield .custom_select select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+    }
+
+
+    .wrapper .form .inputfield .input:focus,
+    .wrapper .form .inputfield .textarea:focus,
+    .wrapper .form .inputfield .custom_select select:focus{
+    border: 0px solid var(--primary-color);;
+    }
+
+    .wrapper .form .inputfield p{   
+        text-align: center;
+        font-size: 14px;
+        color: var(--primary-color);
+    }
+    .wrapper .form .inputfield .check{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    }
+    .wrapper .form .inputfield .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    }
+    .wrapper .form .inputfield .check .checkmark{
+    width: 16px;
+    background-color: #d5dbd9;
+    height: 16px;
+    border: 1px solid rgb(1, 195, 142);
+    display: block;
+    position: relative;
+    }
+    .wrapper .form .inputfield .check .checkmark:before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+    }
+    .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+    background: rgb(1, 195, 142);
+    }
+
+    .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+        
+    display: block;
+    }
+
+    .btn{
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #d5dbd9;
+    padding: 14px 40px;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(0, 255, 187), rgb(1, 177, 130));
+    font-size: 18px;
+    bottom: 0px;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 0px solid var(--primary-color);
+    }
+
+    .btn:hover{
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        color: #fff;
+    }
+    .wrapper .form .inputfield:last-child{
+    margin-bottom: 0;
+    }
+  
+    #icono{
+        margin-top: 20px;
+        position: absolute;
+        left : 49%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 27px;
+        font-size: 20px;
+    }
+
+    .registration {
+        font-size: 13.5px;
+        text-align: center;
+        /* margin-top: 5px; */
+        color: var(--primary-color);
+    }
+
+    .registration p a {
+        color:rgb(1, 195, 142);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .registration p a :hover {
+        text-decoration: underline;
+    }
+    
+    
+    #additionalFields{
+        height: 9rem;
+    }
+
+  /* @media (max-width:420px) {
+    .wrapper .form .inputfield{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper .form .inputfield label{
+      margin-bottom: 5px;
+    }
+    .wrapper .form .inputfield.terms{
+      flex-direction: row;
+    } 
+  }
+/*
+
+
+
+
+
+
+
+
+/* .wrapper h1{
+    font-size: 37px;
+    text-align: center;
+}
+.wrapper .form-group{
+    position: relative; 
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0;
+}
+.form-group input{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+    border: none;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1A1E29;
+    padding: 20px 45px 20px 20px;
+    margin-top: 10px;
+}
+.form-group input:focus::-moz-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input:focus::-webkit-input-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input:focus::-ms-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input::placeholder{
+    color: #1b4063;
+
+}
+
+
+.form-group img {
+    position: absolute;
+    width: 27px;
+    right: 20px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper .forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12 px;
+    margin: -15px 0 15px;
+
+}
+.forgot label input{
+    
+    margin-right: 4px;
+}
+ .forgot a{
+    color: rgb(1, 195, 142);
+    text-decoration: none;
+}
+.forgot a :hover{
+    text-decoration: underline;
+}
+
+.wrapper .button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: rgb(1, 195, 142);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rbba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+
+
+.wrapper .registration {
+    font-size: 13.5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.registration p a {
+    color:rgb(1, 195, 142);
+    text-decoration: none;
+    font-weight: 600;
+}
+.registration p a :hover {
+    text-decoration: underline;
+}
+
+
+
+
+#icono{
+    margin-top: 20px;
+    position: absolute;
+    left : 49%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 27px;
+    font-size: 20px;
+}
+
+#errorin{
+    color: #d01010;
+   
+} */
+
+
+/*============================================log in page end==========================*/
+
+
+/*============================================ Registration start ==========================*/
+

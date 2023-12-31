@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color : rgb(255, 255, 255);
+    --bg : url(images/Bg1.png);
+}
+
+.light-mode{
+    --primary-color : #1b4063;
+    --bg : url(images/Bg2.png);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+   width: 420px;
+   background: transparent;
+   border: 2px solid rgb(1, 195, 142);
+   color: var(--primary-color);
+   backdrop-filter: blur(10px);
+   box-shadow: 0 0 10 px rgba(41, 182, 243, 0.2);
+   padding: 30px 30px ;
+   border-top-left-radius: 50px;
+   border-bottom-right-radius: 50px;
+
+}
+.wrapper h1{
+    font-size: 37px;
+    text-align: center;
+}
+.wrapper .form-group{
+    position: relative; 
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0;
+}
+.form-group input{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+    border: none;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1A1E29;
+    padding: 20px 45px 20px 20px;
+    margin-top: 10px;
+}
+.form-group input:focus::-moz-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input:focus::-webkit-input-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input:focus::-ms-placeholder{
+    opacity: 0;
+
+}
+
+.form-group input::placeholder{
+    color: #1b4063;
+
+}
+
+
+.form-group img {
+    position: absolute;
+    width: 27px;
+    right: 20px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper .forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12 px;
+    margin: -15px 0 15px;
+
+}
+.forgot label input{
+    
+    margin-right: 4px;
+}
+ .forgot a{
+    color: rgb(1, 195, 142);
+    text-decoration: none;
+}
+.forgot a :hover{
+    text-decoration: underline;
+}
+
+.wrapper .button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: rgb(1, 195, 142);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rbba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+
+
+.wrapper .registration {
+    font-size: 13.5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.registration p a {
+    color:rgb(1, 195, 142);
+    text-decoration: none;
+    font-weight: 600;
+}
+.registration p a :hover {
+    text-decoration: underline;
+}
+
+
+
+
+#icono{
+    margin-top: 20px;
+    position: absolute;
+    left : 49%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 27px;
+    font-size: 20px;
+}
+
+#errorin{
+    color: #d01010;
+   
+}
+
+#logos{
+    width: 10px;
+
+}
+#logos:hover{
+    width: 10px;
+}
+
+.imgh {
+    height: 20%;
+    width: 100
+}
+/*============================================log in page end==========================*/
+
+
+/*============================================ Registration start ==========================*/

@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary-color : #1b4063;
+    --secondary-color : #ffffff;
+    --detail : rgb(1, 195, 142);
+    --hover_animation : rgb(1, 195, 142);
+    --back : url(images/Bg1.png);
+}
+
+.light-home{
+    --primary-color : #ffffff;
+    --secondary-color : #1b4063;
+    --detail : rgb(1, 195, 142);
+    --hover_animation : #1b4063;
+    --back : url(images/Bg2.png);   
+}
+
+.frame{
+    width: 100%;
+    min-height: 12vh;
+    background: transparent;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: absolute;
+}
+
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 140px;
+
+}
+nav ul{
+    position: absolute;
+    right: 38%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    font-size: 18px;
+    color: var(--hover_animation);
+}
+
+.signup{
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-right: 15px;
+    font-weight: 500;
+
+}
+.signup:hover{
+    font-size: 18px;
+    color: var(--hover_animation);
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 14px 40px;
+    color: #ffffff;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(0, 255, 187), rgb(0, 181, 133));
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.btn:hover{
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-image: linear-gradient(45deg, rgb(244, 37, 1), rgb(184, 1, 1));
+}
+
+#icono{
+    width: 25px;
+    position: absolute;
+    top: 4% ;
+    margin-left: 15px;
+}
+
+#icono:hover{
+    width: 27px;
+    top: 3.7%;
+}
+
+.content{
+    margin-top: 13%;
+    max-width: 600px;
+}
+
+.content h1{
+    font-size: 70px;
+    color: var(--secondary-color);
+}
+
+.content p{
+    margin: 10px 0 30px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.content .btn{
+    padding: 14px 50px;
+    font-size: 16px;
+
+}
+
+
+
+.feature-img{
+    width: 900px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 900px;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
